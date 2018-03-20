@@ -1,0 +1,141 @@
+// Variables
+// @import 'colors';
+// @import 'sizes';
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(rgba(101, 143, 251, 0.5), rgba(101, 143, 251, 0.5)), url("landscape.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#root {
+	display: flex;
+	justify-content: center;
+}
+
+.weather {
+	border-radius: 4px;
+	margin: 50px 0 0;
+	min-width: 500px;
+
+	&--footer {
+		bottom: 0;
+		left: 50%;
+		margin: 0 0 16px -99.5px;
+		position: absolute;
+
+		span {
+			color: #FFFFFF;
+			font-size: 14px;
+		}
+	}
+
+	&--meta {
+		display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+
+		&--city,
+		&--temp,
+		&--descrip {
+			color: #FFFFFF;
+			margin: 0 0 16px;
+		}
+
+		&--city {
+			font-size: 24px;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 4px;
+		}
+
+		&--temp {
+			font-size: 50px;
+			font-weight: bold;
+		}
+
+		&--descrip {
+			font-style: italic;
+			margin: 0;
+		}
+	}
+
+	&--container {
+		align-items: center;
+		background: #F96A48;
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		height: 300px;
+		padding: 24px;
+	}
+
+	&--form {
+		width: 100%;
+		display: flex;
+		height: 48px;
+
+		&--container {
+			display: flex;
+			width: 100%;
+		}
+
+		input {
+			border: none;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			flex: 1 1 50%;
+			font-size: 14px;
+			padding: 0 8px;
+		}
+
+		button {
+			box-sizing: border-box;
+			flex: 0 0 auto;
+			width: 100px;
+			padding: 12px;
+			background: #5d95de;
+	    color: white;
+	    border: none;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			font-size: 14px;
+		}
+	}
+
+	&--header {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h1 {
+			color: #FFFFFF;
+			font-size: 50px;
+			letter-spacing: 1px;
+			margin: 0 0 4px;
+		}
+
+		p {
+			color: #FFFFFF;
+			margin: 0 0 24px;
+		}
+	}
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
